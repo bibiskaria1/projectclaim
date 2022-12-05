@@ -1,0 +1,8 @@
+.btn {
+    background-color: rgb(248, 224, 10); /* Blue background */
+    border: none; /* Remove borders */
+    color: rgb(27, 24, 24); /* White text */
+    padding: 5px 16px; /* Some padding */
+    font-size: 16px; /* Set a font size */
+    cursor: pointer; /* Mouse pointer on hover */
+  }

@@ -1,0 +1,30 @@
+<table class="table table-hover">
+    <thead class="thead-primary">
+        <tr>
+            <th>MId</th>
+            <th>MName</th>
+            <th>Address</th>
+            <th>DOB</th>
+            <th>Email</th>
+            <th>Contact</th>
+            <th>State</th>
+           <th>Country</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of objDis.pList">
+            <td (click)="fillForm(p)">{{p.Mid}}</td>
+            <td (click)="fillForm(p)">{{p.MName}}</td>
+            <td (click)="fillForm(p)">{{p.Address}}</td>
+            <td (click)="fillForm(p)">{{p.DOJ}}</td>
+            <td (click)="fillForm(p)">{{p.Email}}</td>
+            <td (click)="fillForm(p)">{{p.Contact}}</td>
+            <td (click)="fillForm(p)">{{p.State}}</td>
+            <td (click)="fillForm(p)">{{p.Country}}</td>
+            <td><i class="fa fa-trash red-icon" (click)="del(p.Mid)"></i></td>
+        </tr>
+        
+    </tbody>
+</table>
+

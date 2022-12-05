@@ -1,0 +1,102 @@
+    <body>
+    <div class="login-block">
+      <h1>Sign Up</h1>
+      <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+
+        <input type="hidden" name="Id" [value]="objservice.mdata.Mid">
+
+        <label>Name</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="MName.valid"
+            [class.red-icon]="MName.invalid && MName.touched"></i>
+          <input name="MName" #MName="ngModel"   [(ngModel)]="objservice.mdata.MName" placeholder="Member name" class="form-control" required>
+
+        <label>UserName</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="Username.valid"
+          [class.red-icon]="Username.invalid && Username.touched"></i>
+          <input name="Username" #Username="ngModel"   [(ngModel)]="objservice.mdata.Username" placeholder="Username" class="form-control" required>
+
+        <label>Password</label>
+          <i class="fa fa-user-circle-o" aria-hidden="true" [class.green-icon]="Password.valid"
+          [class.red-icon]="Password.invalid && Password.touched"></i>
+          <input type="password" name="Password" #Password="ngModel"   [(ngModel)]="objservice.mdata.Password" placeholder="minimum 8-characters" class="form-control" required minlength="8">
+
+        <label>Address</label>
+          <i class="fa fa-address-card-o" aria-hidden="true" [class.green-icon]="Address.valid"
+          [class.red-icon]="Address.invalid && Address.touched"></i>
+          <input name="Address" #Address="ngModel"   [(ngModel)]="objservice.mdata.Address" placeholder="Address" class="form-control" required>
+
+          <label>Date of Birth</label>
+          <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="DOJ.valid"
+          [class.red-icon]="DOJ.invalid && DOJ.touched"></i>
+          <input type="date" name="DOJ" #DOJ="ngModel"   [(ngModel)]="objservice.mdata.DOJ" placeholder="MM/DD/YYYY" class="form-control" required maxlength="10">
+          <label>Email</label>
+          <i class="bi bi-envelope" aria-hidden="true" [class.green-icon]="Email.valid"
+          [class.red-icon]="Email.invalid && Email.touched"></i>
+          <input name="Email" #Email="ngModel"   [(ngModel)]="objservice.mdata.Email" placeholder="Email" class="form-control" required>
+
+        <label>Contact</label>
+          <i class="fa fa-calendar" aria-hidden="true" [class.green-icon]="Contact.valid"
+          [class.red-icon]="Contact.invalid && Contact.touched"></i>
+          <input name="Contact" #Contact="ngModel"   [(ngModel)]="objservice.mdata.Contact" placeholder="10-Digit" class="form-control" required minlength="10">
+
+        <label>State</label>
+          <i class="bi bi-house" aria-hidden="true" [class.green-icon]="State.valid"
+          [class.red-icon]="State.invalid && State.touched"></i>
+          <input name="State" id="state" #State="ngModel"   [(ngModel)]="objservice.mdata.State" placeholder="State" class="form-control" required>
+          
+        <label>Country</label>
+          <i class="bi bi-house" aria-hidden="true" [class.green-icon]="Country.valid"
+          [class.red-icon]="Country.invalid && Country.touched"></i>
+          <select id="country"name="Country" #Country="ngModel"   [(ngModel)]="objservice.mdata.Country" placeholder="Country" class="form-control" required>
+            <option value="AF">Afghanistan</option>
+            <option value="DZ">Algeria</option>
+            <option value="AR">Argentina</option>
+            <option value="AU">Australia</option>
+            <option value="BD">Bangladesh</option>
+            <option value="BE">Belgium</option>
+            <option value="BR">Brazil</option>
+            <option value="CA">Canada</option>
+            <option value="CL">Chile</option>
+            <option value="CN">China</option>
+            <option value="CU">Cuba</option>
+            <option value="DK">Denmark</option>
+            <option value="EG">Egypt</option>
+            <option value="FR">France</option>
+            <option value="GE">Georgia</option>
+            <option value="DE">Germany</option>
+            <option value="IN">India</option>
+            <option value="ID">Indonesia</option>
+            <option value="IR">Iran</option>
+            <option value="IQ">Iraq</option>
+            <option value="IE">Ireland</option>
+            <option value="IT">Italy</option>
+            <option value="JP">Japan</option>
+            <option value="JE">Jersey</option>
+            <option value="JO">Jordan</option>
+            <option value="KZ">Kazakhstan</option>
+            <option value="KE">Kenya</option>
+            <option value="MM">Myanmar</option>
+            <option value="NA">Namibia</option>
+            <option value="NR">Nauru</option>
+            <option value="NP">Nepal</option>
+            <option value="NO">Norway</option>
+            <option value="OM">Oman</option>
+            <option value="PK">Pakistan</option>
+            <option value="SG">Singapore</option>
+            <option value="SE">Sweden</option>
+            <option value="CH">Switzerland</option>
+            <option value="GB">United Kingdom</option>
+            <option value="US">United States</option>
+            <option value="VN">Viet Nam</option>
+            <option value="ZW">Zimbabwe</option>
+           
+        </select>
+          <button class="btn btn-success btn-lg" type="submit" [disabled]="form.invalid" href="HomePage">Sign up</button>
+      </form>
+      <p>
+        By clicking the Sign Up button,you agree to our <br />
+        <a href="#">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+          Already have an account? <a href="login">Login here</a>
+      </p>
+    </div>
+  </body>
