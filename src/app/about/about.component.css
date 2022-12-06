@@ -1,0 +1,18 @@
+.left{
+    position:absolute;
+    top: 80%;
+    left: 10%;
+   
+    transform:none;
+    color: rgb(17, 27, 24);
+    font-family:'Times New Roman', Times, serif;
+  }
+  .right{
+    position:absolute;
+    top: 120%;
+    left: 10%;
+    
+    transform:none;
+    color: rgb(17, 27, 24);
+    font-family:'Times New Roman', Times, serif;
+  }
